@@ -5,9 +5,10 @@ sequenceDiagram;
     participant browser;
     participant server;
 
+    Note right of browser: Form submission event
     browser->>server: POST note to https://studies.cs.helsinki.fi/exampleapp/new_note;
     activate server;
-    server->>browser: redirect browser to https://studies.cs.helsinki.fi/exampleapp/notes;
+    server->>browser: "302;redirect browser to make GET request to https://studies.cs.helsinki.fi/exampleapp/notes";
     deactivate server;
     activate browser;
 
