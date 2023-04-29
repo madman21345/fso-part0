@@ -11,6 +11,7 @@ sequenceDiagram;
     activate browser;
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes;
+    deactivate browser
     server-->>browser: returns HTML document;
     deactivate server;
 
