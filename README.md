@@ -8,10 +8,12 @@ sequenceDiagram;
     browser->>server: POST note to https://studies.cs.helsinki.fi/exampleapp/new_note;
     activate server;
     server->>browser: redirect browser to https://studies.cs.helsinki.fi/exampleapp/notes;
+    deactivate server;
     activate browser;
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes;
-    deactivate browser
+    deactivate browser;
+    activate server;
     server-->>browser: returns HTML document;
     deactivate server;
 
