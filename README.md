@@ -8,6 +8,7 @@ sequenceDiagram;
     browser->>server: POST note to https://studies.cs.helsinki.fi/exampleapp/new_note;
     activate server;
     server->>browser: redirect browser to https://studies.cs.helsinki.fi/exampleapp/notes;
+    activate browser;
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes;
     server-->>browser: returns HTML document;
