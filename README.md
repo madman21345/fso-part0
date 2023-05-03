@@ -83,7 +83,7 @@ sequenceDiagram;
     participant server;
 
     Note right of browser: Form submission event
-    Note right of browser: JS rerenders notes with submitted content and pushes the content to the server
+    Note right of browser: JS rerenders notes, adding the submitted content, and pushes the content to the server
     browser->>server: POST note to https://studies.cs.helsinki.fi/exampleapp/new_note_spa;
     activate server;
     server->>browser: 201, successfully created new note;
